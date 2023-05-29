@@ -2,27 +2,29 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Recipe App\] ](#-recipe-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [RoR_Template] <a name="about-project"></a>
+# 📖 [Recipe App] <a name="about-project"></a>
 
-**Basic Template for Ruby on Rails**
+**Intermediate level recipe app that allows users to add foods, recipes, see public recipes, and add ingredients to specific recipes**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -30,15 +32,20 @@
 
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-  <li><a href="https://www.ruby-lang.org/en/">Rails</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Rails</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
   </ul>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[]**
-- **[]**
+- **Lets users add/delete foods**
+- **Lets users add/delete recipes**
+- **Authentication with devise**
+- **Lets users see public foods**
+- **Lets users add ingredients**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,6 +61,8 @@ In order to run this project you need the following installed in your local syst
 
 <ul>
 <li>Ruby</li>
+<li>Rails</li>
+<li>VSCode</li>
 <li>Git CLI</li>
 <li>Github account</li>
 </ul>
@@ -87,7 +96,6 @@ To run the project, execute the following command:
 
 -  Type `Rspec`: To run test 
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -96,10 +104,14 @@ To run the project, execute the following command:
 
 👤**Shakir Hussain**
 
-- GitHub: [@Shakir-Hussain12](https://github.com/Shakir-Hussain12)
-- Twitter: [@S_Hussain_99](https://twitter.com/S_Hussain_99)
+- GitHub: [@githubhandle](https://github.com/Shakir-Hussain12)
+- Twitter: [@twitterhandle](https://twitter.com/S_Hussain_99)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/shakir-hussain-2129a121b/)
 
+👤**Muhammad Talha Hanif**
+- GitHub: [@githubhandle](https://github.com/Talha-Hanif5666)
+- Twitter: [@twitterhandle](https://twitter.com/TalhaHa45039660?t=R4git6jFgsysI4xPxmN-ag&s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-talha-hanif-6b1355116)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,8 +120,7 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[]**
-- [ ] **[]**
+- [ ] **Add Inventory system**
 
 
 
