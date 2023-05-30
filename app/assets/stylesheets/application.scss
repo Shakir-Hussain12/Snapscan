@@ -1,5 +1,14 @@
-@import "materialize/components/color-variables";
-$primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("yellow", "base") !default;
 @import 'materialize';
-// @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.main-body {
+    max-width: 378px;
+    margin: auto;
+    // padding-top: 40%;
+    padding-top: 15%;
+}
+
+.main-body > .container > .row {
+    margin-bottom: 40%;
+    
+}

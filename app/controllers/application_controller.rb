@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
     include Devise::Controllers::Helpers
     before_action :allowed_parameters, if: :devise_controller?
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
   
     protected
   
