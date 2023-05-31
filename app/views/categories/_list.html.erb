@@ -1,5 +1,5 @@
-<%= link_to categories_path, class: 'link' do %>
-    <div class="catergory-item">
+<%= link_to category_path(category.id), class: 'link' do %>
+    <div class="category-item">
         <h4><%= category.name %></h4>
         <img src="<%= category.icon %>" alt="category">
     </div>
