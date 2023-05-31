@@ -1,0 +1,17 @@
+<h2>Create Game</h2>
+<%= form_with(model: @game, url: category_games_path(category.id), local: true, method: :post) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
