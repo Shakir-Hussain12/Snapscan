@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+    before_action :fetch_categories
+
     def index
     end
 
@@ -12,17 +14,18 @@ class CategoriesController < ApplicationController
 
     def create
         @category = current_user.categories.new(category_params)
-
         if @category.save
+            puts 'success'
             redirect_to categories_path, notice: t('.success')
         else
-            render :new, alert: t('.failure')
+            puts 'failure'
+            redirect_to new_category_path, alert: t('.failure')
         end
     end
 
     private
     def fetch_categories
-        @categories ||= current_user.categories
+        @categories = current_user.categories.order(created_at: :desc)
     end
 
     def category_params

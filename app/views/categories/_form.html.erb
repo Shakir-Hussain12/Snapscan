@@ -1,0 +1,17 @@
+<h2>Create Category</h2>
+<%= form_with(model: @category, url: categories_path, local: true, method: :post) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :icon %><br />
+    <%= f.text_field :icon, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
