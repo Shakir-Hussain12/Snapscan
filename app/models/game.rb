@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, foreign_key: 'user_id'
   has_many :game_categories
   has_many :categories, through: :game_categories
 

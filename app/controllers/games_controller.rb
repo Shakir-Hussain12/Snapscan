@@ -5,11 +5,11 @@ class GamesController < ApplicationController
     end
 
     def show
-        @game = current_user.categories.games.find(params[:id])
+        # @game = current_user.categories.games.find(params[:id])
     end
 
     def new
-        @game = current_user.categories.games.new
+        # @game = current_user.categories.games.new
     end
 
     def create
@@ -25,7 +25,8 @@ class GamesController < ApplicationController
 
     private
     def fetch_games
-        @games = current_user.categories.games.order(created_at: :desc)
+        # @games = current_user.categories.games.order(created_at: :desc)
+        @games = current_user.games
     end
 
     def game_params

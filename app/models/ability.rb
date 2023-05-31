@@ -10,6 +10,8 @@ class Ability
     if user.persisted?
       can :read, :all
       can :manage, User, id: user.id
+      can :manage, Category, user_id: user.id
+      can :manage, Game, user_id: user.id
     else
       can :read, :all
     end

@@ -11,6 +11,6 @@ class Category < ApplicationRecord
   private
 
   def update_count
-    user.update(categories_count: user.category.count)
+    user.update(categories_count: user.categories.count)
   end
 end
