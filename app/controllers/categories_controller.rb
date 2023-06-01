@@ -15,10 +15,8 @@ class CategoriesController < ApplicationController
     def create
         @category = current_user.categories.new(category_params)
         if @category.save
-            puts 'success'
             redirect_to categories_path, notice: t('.success')
         else
-            puts 'failure'
             redirect_to new_category_path, alert: t('.failure')
         end
     end

@@ -5,21 +5,19 @@ class GamesController < ApplicationController
     end
 
     def show
-        # @game = current_user.categories.games.find(params[:id])
+        @game = current_user.games.find(params[:id])
     end
 
     def new
-        # @game = current_user.categories.games.new
+        @game = current_user.games.new
     end
 
     def create
-        @game = current_user.categories.games.new(game_params)
+        @game = current_user.games.new(game_params)
         if @game.save
-            puts 'success'
-            redirect_to games_path, notice: t('.success')
+            redirect_to category_games_path(current_user.categories.first.id), notice: t('.success')
         else
-            puts 'failure'
-            redirect_to new_category_path, alert: t('.failure')
+            redirect_to new_category_game_path(current_user.categories.first.id), alert: t('.`fa`ilure')
         end
     end
 

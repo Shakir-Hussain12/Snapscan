@@ -7,7 +7,7 @@
 
   <div class="field">
     <%= f.label :amount %><br />
-    <%= f.number_field :amount, required: true %>
+    <%= f.number_field :amount, step: 1, required: true %>
   </div>
 
   <div class="actions">
