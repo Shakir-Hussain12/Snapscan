@@ -1,5 +1,5 @@
-<h2 class="center-align"><%= current_user.categories.name %>'s Games</h2>
+<h2 class="center-align"><%= @category.name %> Games</h2>
 <div class="game-container center-align">
     <%= render partial: 'list', collection: @games, as: :game %>
-    <a class="waves-effect waves-light btn-small hoverable" href="/categories/:id/games/new"><i class="material-icons right">create</i>Add game</a>
+    <a class="waves-effect waves-light btn-small hoverable" href="/categories/<%=category.id%>/games/new"><i class="material-icons right">create</i>Add game</a>
 </div>

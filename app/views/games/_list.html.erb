@@ -1,6 +1,6 @@
 <%= link_to category_game_path(current_user.categories.first.id, game.id), class: 'link' do %>
     <div class="game-item">
         <h4><%= game.name %></h4>
-        <img src="<%= game.amount %>" alt="game">
+        <p><%= number_to_currency(game.amount) %></p>
     </div>
 <% end %>

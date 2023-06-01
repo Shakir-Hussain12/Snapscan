@@ -10,6 +10,11 @@
     <%= f.number_field :amount, step: 1, required: true %>
   </div>
 
+  <div class="field" id="select_field">
+    <%= f.label :category_ids, 'Categories' %>
+    <%= f.collection_select :category_ids, Category.all, :id, :name, { prompt: 'Select Category' } %>
+  </div>
+  
   <div class="actions">
     <%= f.submit "Create" %>
   </div>

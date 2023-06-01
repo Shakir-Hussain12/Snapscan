@@ -4,10 +4,6 @@ class CategoriesController < ApplicationController
     def index
     end
 
-    def show
-        @category = Category.find(params[:id])
-    end
-
     def new
         @category = current_user.categories.new
     end

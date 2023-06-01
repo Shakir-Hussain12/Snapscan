@@ -1,6 +1,11 @@
-<%= link_to category_path(category.id), class: 'link' do %>
+<%= link_to category_games_path(category.id), class: 'link' do %>
     <div class="category-item">
-        <h4><%= category.name %></h4>
         <img src="<%= category.icon %>" alt="category">
+        <h4><%= category.name %></h4>
+        <% total = 0 %>
+        <% category.games.each do |game| %>
+            <% total += game.amount %>
+        <% end %>
+        <p><%= number_to_currency(total) %></p>
     </div>
 <% end %>
