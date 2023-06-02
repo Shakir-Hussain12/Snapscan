@@ -28,7 +28,7 @@
       <%= f.collection_select :category_ids, Category.all, :id, :name, { prompt: 'Select category' } %>
     </div>
     
-    <div class="actions">
+    <div class="special-btn">
       <%= f.submit "Create" %>
     </div>
   <% end %>

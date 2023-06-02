@@ -1,10 +1,44 @@
 @import 'materialize';
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+body {
+    color: #434b54;
+}
+
+@font-face {
+    font-family: "Proxima";
+    src: url("./Proxima\ Nova\ Font.otf");
+}
+
+body * {
+    font-family: "Proxima", sans-serif;
+    font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Proxima", sans-serif;
+    font-weight: bold;
+}
+
 .main-body {
     max-width: 378px;
     margin: auto;
     padding-top: 40%;
+}
+
+.devise-container {
+    padding: 2%;
+}
+
+nav {
+    margin-top: -4%;
+    margin-bottom: 5%;
+    background-color: #3778c2;
 }
 
 .main-body > .container > .row {
@@ -103,18 +137,32 @@ img.responsive-img {
     margin-bottom: 2%;
 }
 
-nav {
-    margin-top: -4%;
-    margin-bottom: 5%;
+.actions {
+    margin: 3% 0;
 }
 
-.actions {
+.special-btn {
+    text-decoration: none;
+    color: white;
     position: fixed;
     top: 3vh;
     right: 2%;
 }
 
-.actions > input {
+#remember {
+    display: flex;
+    gap: 5%;
+}
+
+#remember > * {
+    opacity: 1;
+}
+
+#remember label {
+    margin-inline-start: 5%;
+}
+
+.special-btn > input {
     background: transparent;
     border: none;
     color: white;
@@ -130,7 +178,6 @@ nav {
 
 .payment {
     text-transform: uppercase;
-    font-style: italic;
     font-weight: bold;
 }
 

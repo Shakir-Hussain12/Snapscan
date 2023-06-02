@@ -1,4 +1,8 @@
 <%= render partial: 'shared/navbar', locals: {heading: 'Categories', move: ''} %>
+<%= link_to 'LogOut', destroy_user_session_path,  data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+    }, class: "special-btn" %>
 <div class="main-category-container hide-on-med-and-up">
     <div class="category-container center-align">
         <%= render partial: 'list', collection: @categories, as: :category %>

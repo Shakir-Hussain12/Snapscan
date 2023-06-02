@@ -1,7 +1,7 @@
 <%= link_to category_game_path(@category.id, game.id), class: 'link' do %>
     <div class="game-item">
         <h4><%= game.name %></h4>
-        <p class="date"><i class="material-icons left book">book</i><%= game.created_at.strftime("%B %d, %Y") %> at <%= game.created_at.strftime("%-l %P") %></p>
+        <p class="date"><i class="material-icons left book">perm_contact_calendar</i><%= game.created_at.strftime("%B %d, %Y") %> at <%= game.created_at.strftime("%-l %P") %></p>
         <p class="payment">Payment <span class="money"><%= number_to_currency(game.amount)%></span></p>
         <%= link_to "Delete Game", category_game_path(@category.id, game.id), data: {
             turbo_method: :delete,
