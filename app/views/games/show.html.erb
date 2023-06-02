@@ -1,4 +1,7 @@
-<div class="game-item">
+<div class="game-item-show">
     <h4><%= @game.name %></h4>
-    <h3><%= @game.amount %></h3>
+    <hr />
+    <p><%= @game.description %></p>
+    <hr />
+    <p><strong><em>Amount:</em><span class="money"><%= number_to_currency(@game.amount) %></span></strong></p>
 </div>

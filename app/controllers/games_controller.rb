@@ -17,16 +17,16 @@ class GamesController < ApplicationController
         @game = current_user.games.new(game_params)
         if @game.save
             @game.categories << Category.find(params[:game][:category_ids])
-            redirect_to category_games_path(current_user.categories.first.id), notice: t('.success')
+            redirect_to category_games_path(params[:game][:category_ids]), notice: t('.success')
         else
-            redirect_to new_category_game_path(current_user.categories.first.id), alert: t('.failure')
+            redirect_to new_category_game_path(params[:game][:category_ids]), alert: t('.failure')
         end
     end
 
     private
     
     def game_params
-        params.require(:game).permit(:name, :amount,  category_ids: [])
+        params.require(:game).permit(:name, :amount, :description, category_ids: [])
     end
 
 end

@@ -31,14 +31,10 @@
 
 en:
   hello: "Hello world"
-
-en:
   categories:
     create:
       failure: "Failed to create the category. Please try again."
       success: "Category created successfully."
-
-en:
   games:
     create:
       failure: "Failed to create the Game. Please try again."

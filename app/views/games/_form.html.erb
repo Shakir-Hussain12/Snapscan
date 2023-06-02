@@ -1,18 +1,30 @@
 <h2>Create Game</h2>
-<%= form_with(model: @game, url: category_games_path(current_user.categories.first.id), local: true, method: :post) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, required: true %>
+<%= form_with(model: @game, url: category_games_path(current_user.categories.first.id), local: true, method: :post, class: "my-form") do |f| %>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">account_circle</i>
+      <input id="game_name" type="text" value="" class="validate" name="game[name]" placeholder="Name" required autofocus>
+      <label for="game_name"></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">description</i>
+      <input id="game_description" type="text" class="validate" name="game[description]" placeholder="Description" required>
+      <label for="game_description"></label>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :amount %><br />
-    <%= f.number_field :amount, step: 1, required: true %>
+  <div class="input-field">
+    <p class="range-field">
+      <label for="game_amount">Amount(1-100)</label>
+      <input type="range" id="game_amount" name="game[amount]" min="1" max="100" required/>
+    </p>
   </div>
 
-  <div class="field" id="select_field">
+  <div id="select_field">
     <%= f.label :category_ids, 'Categories' %>
-    <%= f.collection_select :category_ids, Category.all, :id, :name, { prompt: 'Select Category' } %>
+    <%= f.collection_select :category_ids, Category.all, :id, :name, { prompt: 'Select category' } %>
   </div>
   
   <div class="actions">

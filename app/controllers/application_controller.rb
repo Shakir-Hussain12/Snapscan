@@ -13,7 +13,13 @@ class ApplicationController < ActionController::Base
     end
 
     def authenticate_user!
-      redirect_to home_path unless User.any?
+      redirect_to home_path unless User.any? || within_authenticate_user?
+    end
+
+    private
+
+    def within_authenticate_user?
+      caller.any? { |call| call.include?('authenticate_user!') }
     end
   end
   

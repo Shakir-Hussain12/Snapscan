@@ -1,6 +1,8 @@
 <%= link_to category_game_path(current_user.categories.first.id, game.id), class: 'link' do %>
     <div class="game-item">
         <h4><%= game.name %></h4>
-        <p><%= number_to_currency(game.amount) %></p>
+        <p><%= game.created_at.strftime("%B %d, %Y") %> at <%= game.created_at.strftime("%-l %P") %></p>
+        <p>Payment <span class="money"><%= number_to_currency(game.amount)%></span></p>
+        <hr />
     </div>
 <% end %>
