@@ -32,6 +32,10 @@
     opacity: 1;
 }
 
+.category-container {
+    padding: 2% 0;
+}
+
 .category-item {
     display: flex;
     justify-content: space-between;
@@ -89,4 +93,13 @@ img.responsive-img {
 .game-item-show {
     max-width: 95%;
     margin: auto;
+}
+
+.cat-del-btn {
+    margin-top: -110px;
+}
+
+#add-cat-btn {
+    margin-inline-start: 30%;
+    margin-bottom: 2%;
 }

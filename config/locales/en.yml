@@ -35,7 +35,13 @@ en:
     create:
       failure: "Failed to create the category. Please try again."
       success: "Category created successfully."
+    destroy:
+      failure: "Failed to delete the Category. Please try again."
+      success: "Category deleted successfully."
   games:
     create:
       failure: "Failed to create the Game. Please try again."
       success: "Game created successfully."
+    destroy:
+      failure: "Failed to delete the Game. Please try again."
+      success: "Game deleted successfully."

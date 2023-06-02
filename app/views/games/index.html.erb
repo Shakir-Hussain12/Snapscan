@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container hide-on-med-and-up">
     <div class="cartgory-details">
         <div class="top-line"> 
             <img src="<%= @category.icon %>" alt="icon" class="circle responsive-img">
@@ -10,12 +10,13 @@
     </div>
     <hr />
     <div class="game-container center-align">
-        <%= render partial: 'list', collection: @games, as: :game %>
+        <%= render partial: 'list', collection: @games, as: :game, category: @category %>
         <% total = 0 %>
         <% category.games.each do |game| %>
             <% total += game.amount %>
         <% end %>
         <p class="left-align">Grand Total <span class="money"><%= number_to_currency(total) %></span></p>
+        <hr />
         <a class="waves-effect waves-light btn-small hoverable" href="/categories/<%=category.id%>/games/new"><i class="material-icons right">create</i>Add game</a>
     </div>
 </div>

@@ -13,4 +13,9 @@
             <p><%= number_to_currency(total) %></p>
         </div>
     </div>
+    <%= link_to "Delete Category", category_path(category.id), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+        }, class: "waves-effect waves-light btn-small hoverable cat-del-btn"
+    %>
 <% end %>

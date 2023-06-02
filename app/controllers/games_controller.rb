@@ -23,6 +23,15 @@ class GamesController < ApplicationController
         end
     end
 
+    def destroy
+        @game = current_user.games.find(params[:id])
+        if @game.destroy
+            redirect_to category_games_path(params[:category_id]), notice: t('.success')
+        else
+            redirect_to category_game_path(params[:game][:category_id]), alert: t('.failure')
+        end
+    end
+
     private
     
     def game_params

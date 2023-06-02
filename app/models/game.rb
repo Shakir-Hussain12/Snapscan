@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
   belongs_to :user, foreign_key: 'user_id'
-  has_many :game_categories
+  has_many :game_categories, dependent: :destroy
   has_many :categories, through: :game_categories
 
   validates :name, presence: true

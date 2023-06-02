@@ -17,6 +17,15 @@ class CategoriesController < ApplicationController
         end
     end
 
+    def destroy
+        @category = current_user.categories.find(params[:id])
+        if @category.destroy
+            redirect_to categories_path, notice: t('.success')
+        else
+            redirect_to categories_path , alert: t('.failure')
+        end
+    end
+
     private
     def fetch_categories
         @categories = current_user.categories.order(created_at: :desc)
