@@ -4,8 +4,7 @@
 .main-body {
     max-width: 378px;
     margin: auto;
-    // padding-top: 40%;
-    padding-top: 15%;
+    padding-top: 40%;
 }
 
 .main-body > .container > .row {
@@ -102,4 +101,43 @@ img.responsive-img {
 #add-cat-btn {
     margin-inline-start: 30%;
     margin-bottom: 2%;
+}
+
+nav {
+    margin-top: -4%;
+    margin-bottom: 5%;
+}
+
+.actions {
+    position: fixed;
+    top: 3vh;
+    right: 2%;
+}
+
+.actions > input {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.back-btn {
+    margin-top: 3px;
+}
+
+.del-btn {
+    margin-inline-start: 115px;
+}
+
+.payment {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+}
+
+i.book {
+    margin-right: 1px;
+}
+
+.date {
+    font-style: italic;
 }

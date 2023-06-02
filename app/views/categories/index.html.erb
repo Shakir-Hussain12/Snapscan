@@ -1,5 +1,5 @@
+<%= render partial: 'shared/navbar', locals: {heading: 'Categories', move: ''} %>
 <div class="main-category-container hide-on-med-and-up">
-    <h2 class="center-align"><%= current_user.name %>'s Categories</h2>
     <div class="category-container center-align">
         <%= render partial: 'list', collection: @categories, as: :category %>
     </div>

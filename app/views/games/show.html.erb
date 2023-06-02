@@ -1,7 +1,8 @@
+<%= render partial: 'shared/navbar', locals: {heading: 'Games', move: category_games_path(@category.id)} %>
 <div class="game-item-show hide-on-med-and-up">
     <h4><%= @game.name %></h4>
     <hr />
     <p><%= @game.description %></p>
     <hr />
-    <p><strong><em>Amount:</em><span class="money"><%= number_to_currency(@game.amount) %></span></strong></p>
+    <p class="payment">Amount:<span class="money"><%= number_to_currency(@game.amount) %></span></p>
 </div>

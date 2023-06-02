@@ -1,0 +1,12 @@
+<nav class="hide-on-med-and-up">
+    <div class="nav-wrapper">
+      <h6 class="brand-logo center"><%=heading%></h6>
+      <ul id="nav-mobile" class="left">
+        <% if move.length > 1 %>
+            <li>
+                <%= link_to 'Back', move, method: :get, class: 'back-btn' %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>

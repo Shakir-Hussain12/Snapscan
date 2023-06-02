@@ -7,9 +7,11 @@ class GamesController < ApplicationController
 
     def show
         @game = current_user.games.find(params[:id])
+        @category = current_user.categories.find(params[:category_id])
     end
 
     def new
+        @category = current_user.categories.find(params[:category_id])
         @game = current_user.games.new
     end
 

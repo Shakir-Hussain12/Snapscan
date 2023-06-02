@@ -1,3 +1,4 @@
+<%= render partial: 'shared/navbar', locals: {heading: 'Games', move: categories_path} %>
 <div class="main-container hide-on-med-and-up">
     <div class="cartgory-details">
         <div class="top-line"> 
@@ -15,7 +16,7 @@
         <% category.games.each do |game| %>
             <% total += game.amount %>
         <% end %>
-        <p class="left-align">Grand Total <span class="money"><%= number_to_currency(total) %></span></p>
+        <p class="left-align payment">Grand Total <span class="money"><%= number_to_currency(total) %></span></p>
         <hr />
         <a class="waves-effect waves-light btn-small hoverable" href="/categories/<%=category.id%>/games/new"><i class="material-icons right">create</i>Add game</a>
     </div>

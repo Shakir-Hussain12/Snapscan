@@ -1,29 +1,31 @@
-<h2>Create Category</h2>
-<%= form_with(model: @category, url: categories_path, local: true, method: :post, class: 'my-form') do |f| %>
-  <div class="row">
-    <div class="input-field col s12">
-      <i class="material-icons prefix">account_circle</i>
-      <input id="category_name" type="text" value="" class="validate" name="category[name]" placeholder="Name" required autofocus>
-      <label for="category_name"></label>
+<div class="form-container hide-on-med-and-up">
+  <%= render partial: 'shared/navbar', locals: {heading: 'Create', move: categories_path} %>
+  <%= form_with(model: @category, url: categories_path, local: true, method: :post, class: 'my-form') do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="category_name" type="text" value="" class="validate" name="category[name]" placeholder="Name" required autofocus>
+        <label for="category_name"></label>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s12">
-      <i class="material-icons prefix">description</i>
-      <input id="category_description" type="text" class="validate" name="category[description]" placeholder="Description" required>
-      <label for="category_description"></label>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">description</i>
+        <input id="category_description" type="text" class="validate" name="category[description]" placeholder="Description" required>
+        <label for="category_description"></label>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s12">
-      <i class="material-icons prefix">image</i>
-      <input id="category_icon" type="text" class="validate" name="category[icon]" placeholder="Icon Link" required>
-      <label for="category_icon"></label>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">image</i>
+        <input id="category_icon" type="text" class="validate" name="category[icon]" placeholder="Icon Link" required>
+        <label for="category_icon"></label>
+      </div>
     </div>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Create" %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "Next" %>
+    </div>
+  <% end %>
+</div>
 
