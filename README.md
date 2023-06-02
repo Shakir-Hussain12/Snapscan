@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [Live-Demo ](#live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -24,7 +25,7 @@
 
 # 📖 [Snapscan] <a name="about-project"></a>
 
-**Simple interactive app that allows users to add different categories and transactions within each one of them**
+**Simple interactive app that allows users to add/delete different categories and games within each one of them**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,12 +44,21 @@
 ### Key Features <a name="key-features"></a>
 
 - **Lets users add/delete categories**
-- **Lets users add/delete transaction**
+- **Lets users add/delete games**
 - **Authentication with devise**
 - **Authorization with cancancan**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Live-Demo <a name="live-demo"></a>
+
+- [render-link](https://snapscan.onrender.com)
+
+```sh
+It will not show on desktop screens, so "ctrl+shift+U", and then change to mobile screen.
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
