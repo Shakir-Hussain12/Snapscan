@@ -4,7 +4,7 @@ RSpec.describe 'Category', type: :model do
   describe 'Model' do
     before do
       @user = User.create(name: 'Test user', email: 'test444@gmail.com', password: '123456',
-        password_confirmation: '123456', confirmation_token: nil, confirmed_at: Time.now)
+                          password_confirmation: '123456', confirmation_token: nil, confirmed_at: Time.now)
       @category = @user.categories.new(name: 'test category', icon: 'my-icon')
     end
 

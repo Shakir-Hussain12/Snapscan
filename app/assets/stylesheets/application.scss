@@ -2,17 +2,17 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 body {
-    color: #434b54;
+  color: #434b54;
 }
 
 @font-face {
-    font-family: "Proxima";
-    src: url("./Proxima\ Nova\ Font.otf");
+  font-family: "Proxima";
+  src: url("./Proxima\ Nova\ Font.otf");
 }
 
 body * {
-    font-family: "Proxima", sans-serif;
-    font-weight: lighter;
+  font-family: "Proxima", sans-serif;
+  font-weight: lighter;
 }
 
 h1,
@@ -21,170 +21,169 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Proxima", sans-serif;
-    font-weight: bold;
+  font-family: "Proxima", sans-serif;
+  font-weight: bold;
 }
 
 .main-body {
-    max-width: 378px;
-    margin: auto;
-    padding-top: 40%;
+  max-width: 378px;
+  margin: auto;
+  padding-top: 40%;
 }
 
 .devise-container {
-    padding: 2%;
+  padding: 2%;
 }
 
 nav {
-    margin-top: -4%;
-    margin-bottom: 5%;
-    background-color: #3778c2;
+  margin-top: -4%;
+  margin-bottom: 5%;
+  background-color: #3778c2;
 }
 
 .main-body > .container > .row {
-    margin-bottom: 40%;
-    
+  margin-bottom: 40%;
 }
 
 .link * {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 #new_user,
 .my-form {
-    max-width: 90%;
-    margin: auto;
+  max-width: 90%;
+  margin: auto;
 }
 
 #msg {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
-#game_category_ids{
-    opacity: 1;
+#game_category_ids {
+  opacity: 1;
 }
 
 .category-container {
-    padding: 2% 0;
+  padding: 2% 0;
 }
 
 .category-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 1% 3%;
-    max-width: 95%;
-    margin: auto;
-    box-shadow: 2px 6px 4px 5px gray;
-    margin-bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 3%;
+  max-width: 95%;
+  margin: auto;
+  box-shadow: 2px 6px 4px 5px gray;
+  margin-bottom: 10%;
 }
 
 img.responsive-img {
-    max-width: 25%;
-    max-height: 50px;
-    display: flex;
-    align-self: center;
+  max-width: 25%;
+  max-height: 50px;
+  display: flex;
+  align-self: center;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-inline-start: -75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-inline-start: -100px;
 }
 
 .price {
-    align-self: center;
-    font-weight: bolder;
+  align-self: center;
+  font-weight: bolder;
 }
 
 .main-container {
-    max-width: 95%;
-    margin: auto;
-    padding: 2%;
-    box-shadow: 2px 6px 4px 5px gray;
+  max-width: 95%;
+  margin: auto;
+  padding: 2%;
+  box-shadow: 2px 6px 4px 5px gray;
 }
 
 .top-line {
-    display: flex;
-    gap: 5%;
-    align-items: center;
+  display: flex;
+  gap: 5%;
+  align-items: center;
 }
 
 .top-line > * {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .game-item {
-    text-align: left;
+  text-align: left;
 }
 
 .money {
-    float: right;
+  float: right;
 }
 
 .game-item-show {
-    max-width: 95%;
-    margin: auto;
+  max-width: 95%;
+  margin: auto;
 }
 
 .cat-del-btn {
-    margin-top: -110px;
+  margin-top: -110px;
 }
 
 #add-cat-btn {
-    margin-inline-start: 30%;
-    margin-bottom: 2%;
+  margin-inline-start: 30%;
+  margin-bottom: 2%;
 }
 
 .actions {
-    margin: 3% 0;
+  margin: 3% 0;
 }
 
 .special-btn {
-    text-decoration: none;
-    color: white;
-    position: fixed;
-    top: 3vh;
-    right: 2%;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 3vh;
+  right: 2%;
 }
 
 #remember {
-    display: flex;
-    gap: 5%;
+  display: flex;
+  gap: 5%;
 }
 
 #remember > * {
-    opacity: 1;
+  opacity: 1;
 }
 
 #remember label {
-    margin-inline-start: 5%;
+  margin-inline-start: 5%;
 }
 
 .special-btn > input {
-    background: transparent;
-    border: none;
-    color: white;
+  background: transparent;
+  border: none;
+  color: white;
 }
 
 .back-btn {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .del-btn {
-    margin-inline-start: 115px;
+  margin-inline-start: 115px;
 }
 
 .payment {
-    text-transform: uppercase;
-    font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 i.book {
-    margin-right: 1px;
+  margin-right: 1px;
 }
 
 .date {
-    font-style: italic;
+  font-style: italic;
 }

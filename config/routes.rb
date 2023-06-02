@@ -6,11 +6,10 @@ Rails.application.routes.draw do
   end
 
   get '/home', to: 'home#index'
-  
+
   authenticated :user do
     root 'categories#index', as: :authenticated_root
   end
 
   root 'home#index'
-    
 end

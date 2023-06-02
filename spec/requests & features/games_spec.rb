@@ -33,36 +33,46 @@ RSpec.describe 'Games', type: :request do
 
   describe 'POST categories/:id/games' do
     it 'returns http success' do
-      post category_games_path(@category.id), params: { game: { name: 'test_game', description: 'test description', amount: 10, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: 'test_game', description: 'test description', amount: 10,
+                             category_ids: @category.id } }
       expect(response).to have_http_status(302)
     end
 
     it 'redirects to the games page on valid params' do
-      post category_games_path(@category.id), params: { game: { name: 'test_game', description: 'test description', amount: 10, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: 'test_game', description: 'test description', amount: 10,
+                             category_ids: @category.id } }
       expect(response).to redirect_to(category_games_path(@category.id))
     end
 
     it 'should create a game on valid params' do
-      post category_games_path(@category.id), params: { game: { name: 'test_game', description: 'test description', amount: 10, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: 'test_game', description: 'test description', amount: 10,
+                             category_ids: @category.id } }
       expect(@user.games.count).to match(2)
-    end    
+    end
 
     it 'does not create a game on invalid params' do
-      post category_games_path(@category.id), params: { game: { name: '', description: 'test description', amount: 10, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: '', description: 'test description', amount: 10, category_ids: @category.id } }
       expect(@user.games.count).to eq(1)
     end
 
     it 'page to have a game on valid params' do
-      post category_games_path(@category.id), params: { game: { name: 'test_game1', description: 'test description', amount: 10, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: 'test_game1', description: 'test description', amount: 10,
+                             category_ids: @category.id } }
       get category_games_path(@category.id)
       expect(response.body).to include('test_game')
     end
 
     it 'page to have an amount on valid params' do
-      post category_games_path(@category.id), params: { game: { name: 'test_game', description: 'test description', amount: 20, category_ids: @category.id } }
+      post category_games_path(@category.id),
+           params: { game: { name: 'test_game', description: 'test description', amount: 20,
+                             category_ids: @category.id } }
       get category_games_path(@category.id)
       expect(response.body).to include('10')
     end
   end
-
 end

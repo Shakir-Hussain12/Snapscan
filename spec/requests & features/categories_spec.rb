@@ -33,12 +33,14 @@ RSpec.describe 'Category', type: :request do
 
   describe 'POST categories' do
     it 'returns http success' do
-      post categories_path, params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
+      post categories_path,
+           params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
       expect(response).to have_http_status(302)
     end
 
     it 'redirects to the categories page on valid params' do
-      post categories_path, params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
+      post categories_path,
+           params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
       expect(response).to redirect_to(categories_path)
     end
 
@@ -48,9 +50,10 @@ RSpec.describe 'Category', type: :request do
     end
 
     it 'should create a category on valid params' do
-      post categories_path, params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
+      post categories_path,
+           params: { category: { name: 'test_category', description: 'test description', icon: 'my-icon' } }
       expect(@user.categories.count).to match(2)
-    end    
+    end
 
     it 'does not create a category on empty name param' do
       post categories_path, params: { category: { name: '', description: 'test description', icon: 'my-icon' } }
@@ -63,16 +66,17 @@ RSpec.describe 'Category', type: :request do
     end
 
     it 'page to have a category on valid params' do
-      post categories_path, params: { category: { name: 'test_category1', description: 'test description', icon: 'my-icon' } }
+      post categories_path,
+           params: { category: { name: 'test_category1', description: 'test description', icon: 'my-icon' } }
       get categories_path
       expect(response.body).to include('test_category1')
     end
 
     it 'page to have an icon on valid params' do
-      post categories_path, params: { category: { name: 'test_category', description: 'test description', icon: 'other_icon' } }
+      post categories_path,
+           params: { category: { name: 'test_category', description: 'test description', icon: 'other_icon' } }
       get categories_path
       expect(response.body).to include('other_icon')
     end
   end
-
 end
