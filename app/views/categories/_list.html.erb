@@ -1,0 +1,21 @@
+<%= link_to category_games_path(category.id), class: 'link' do %>
+    <div class="category-item hoverable">
+        <img src="<%= category.icon %>" alt="category" class="circle responsive-img">
+        <div class="info">
+            <h4><%= category.name %></h4>
+            <p class="date"><i class="material-icons left book">perm_contact_calendar</i><%= category.created_at.strftime("%B %d, %Y") %></p>
+        </div>
+        <div class="price">
+            <% total = 0 %>
+            <% category.games.each do |game| %>
+                <% total += game.amount %>
+            <% end %>
+            <p><%= number_to_currency(total) %></p>
+        </div>
+    </div>
+    <%= link_to "Delete Category", category_path(category.id), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+        }, class: "waves-effect waves-light btn-small hoverable cat-del-btn"
+    %>
+<% end %>

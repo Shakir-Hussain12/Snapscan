@@ -1,0 +1,12 @@
+<%= render partial: 'shared/navbar', locals: {heading: 'Games', move: category_games_path(@category.id)} %>
+<%= link_to 'LogOut', destroy_user_session_path,  data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+    }, class: "special-btn" %>
+<div class="game-item-show hide-on-med-and-up">
+    <h4><%= @game.name %></h4>
+    <hr />
+    <p><%= @game.description %></p>
+    <hr />
+    <p class="payment">Amount:<span class="money"><%= number_to_currency(@game.amount) %></span></p>
+</div>

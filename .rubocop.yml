@@ -4,6 +4,9 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "db/*"
+    - "config/initializers/*"
+    - "bin/**/*"
 
   DisplayCopNames: true
 
