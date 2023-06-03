@@ -7,6 +7,6 @@ class User < ApplicationRecord
   else
     devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
   end
-       
+
   validates :name, presence: true, length: { minimum: 5, maximum: 50 }
 end
